@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head></head>
+
+<body>
+    <nav>
+        <a href="/index.html">Home</a> |
+        <a href="/page1.html">Page 1</a> |
+        <a href="/page2.html">Page 2</a> |
+    </nav>
+
+    Hello
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
